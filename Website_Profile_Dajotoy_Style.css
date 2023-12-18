@@ -1,0 +1,590 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bahnschrift', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+}
+
+/*LOGO====================================================================================*/
+.Logo {
+    position: fixed;
+    top: 10%;
+    left: 4%;
+    width: auto;
+    height: 4vh;
+    z-index: 1;
+    animation: fadeIn 2s ease forwards;
+}
+
+/*NAVIGATION MENU STYLE===================================================================*/
+#Menu_Button,
+#Menu_Icon {
+    position: fixed;
+    width: auto;
+    height: 3.3vh;
+    top: 10%;
+    right: 6.5%;
+    z-index: 999;
+    background: none;
+    border: none;
+    cursor: pointer;
+    animation: fadeIn 1s ease forwards;
+}
+
+#Nav_Menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    z-index: 998;
+}
+
+#Nav_Menu.open {
+    transform: translateX(0);
+}
+
+#Nav_Menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 40% 0;
+}
+
+#Nav_Menu ul li {
+    position: relative;
+    padding: 3.5% 1.5%;
+}
+
+#Nav_Menu ul li a {
+    color: silver;
+    font: bold 2.3vw/1 sans-serif;
+    padding: 1.5% 5%;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#Nav_Menu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3.5%;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+#Nav_Menu ul li a:hover::after {
+    width: 100%;
+}
+
+#Nav_Menu ul li a:hover {
+    color: white;
+}
+
+#Nav_Menu ul li a:hover::after {
+    animation: slideFromLeft 0.5s forwards;
+}
+
+@keyframes slideFromLeft {
+    from {
+        width: 0;
+        left: 0;
+    }
+
+    to {
+        width: 100%;
+        left: 0;
+    }
+}
+
+/*CLOSE NAVIGATION MENU=========================================================================*/
+#Close_Button {
+    display: none;
+    position: absolute;
+    top: 10%;
+    right: 21.5%;
+    z-index: 999;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border: 0.2vh solid black;
+}
+
+#Close_Button img {
+    width: 100%;
+    height: 3vh;
+}
+
+/*WHOLE TEXTS===================================================================================*/
+h1 {
+    top: 7%;
+    right: 12.5%;
+    z-index: 1;
+    color: white;
+    font-size: 4vh;
+    position: fixed;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    animation: fadeIn 2s ease forwards;
+    text-shadow: 0 0 0.1em black;
+}
+
+.Home_Textno01 {
+    color: white;
+    font-weight: bold;
+    font-size: 4vw;
+    top: 35%;
+    left: 50%;
+    position: relative;
+    animation: fadeIn 2s ease forwards;
+}
+
+.Home_Textno02 {
+    color: rgb(240, 240, 240);
+    font-weight: 100;
+    font-size: 2vw;
+    top: 28%;
+    left: 50%;
+    position: relative;
+    animation: fadeIn 2s ease forwards;
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+}
+
+.Home_Textno03_Button {
+    color: white;
+    font: 500 1.5vw/1 'Bahnschrift';
+    top: 27.5%;
+    left: 50%;
+    width: 10%;
+    padding: 3.5% 9.5%;
+    position: relative;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0.1em solid white;
+    text-align: center;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Home_Textno03_Button:hover {
+    color: black;
+    border: .1em rgb(255, 102, 0);
+    background-color: rgb(255, 102, 0);
+}
+
+.Student_Textno01 {
+    color: white;
+    font-weight: bold;
+    font-size: 3.5vw;
+    top: 20%;
+    left: 37%;
+    position: relative;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+}
+
+.Student_Textno02 {
+    color: rgb(240, 240, 240);
+    font-weight: 100;
+    font-size: 1.5vw;
+    top: 20%;
+    left: 37.5%;
+    position: relative;
+    margin-bottom: 40vh;
+}
+
+.Projects_Textno01 {
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    top: 13.5%;
+    left: 40.5%;
+    position: relative;
+    margin-top: 15vh;
+    margin-bottom: .5vh;
+}
+
+.Projects_Textno02 {
+    color: white;
+    font-weight: 100;
+    font-size: 1.3vw;
+    top: 12.5%;
+    left: 40.5%;
+    position: relative;
+    margin-bottom: 1vh;
+}
+
+
+.Projects_Textno03_Button,
+.Projects_Textno04_Button {
+    color: white;
+    font: 500 0.8vw/1 'Bahnschrift';
+    top: 20%;
+    left: 40.5%;
+    position: relative;
+    width: 10%;
+    padding: 3.5% 2%;
+    margin-top: 7.5vh;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0.1em solid white;
+    text-align: center;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Projects_Textno03_Button:hover,
+.Projects_Textno04_Button:hover {
+    color: black;
+    border: .1em rgb(255, 102, 0);
+    background-color: rgb(255, 102, 0);
+}
+
+.Career_Textno01 {
+    color: white;
+    font-weight: bold;
+    font-size: 3.5vw;
+    top: 52.5%;
+    left: 20.1%;
+    position: relative;
+    margin-top: 15vh;
+}
+
+.Career_Textno02 {
+    color: white;
+    font-weight: 100;
+    font-size: 1.5vw;
+    top: 47.5%;
+    left: 20.5%;
+    position: relative;
+    margin-top: 5vh;
+    margin-bottom: 40vh;
+}
+
+.About_Textno01 {
+    color: white;
+    font-weight: bold;
+    font-size: 3.5vw;
+    top: 8.5%;
+    left: 21.5%;
+    position: relative;
+    margin-top: 15vh;
+}
+
+.About_Textno02 {
+    color: white;
+    font-weight: 100;
+    font-size: 1.5vw;
+    top: 3.5%;
+    left: 21.5%;
+    position: relative;
+    margin-top: 5vh;
+}
+
+.About_Textno03_Button {
+    color: white;
+    font: 500 1.5vw/1 'Bahnschrift';
+    top: 8.5%;
+    left: 21.5%;
+    position: relative;
+    height: 1vh;
+    padding: 1.5% 2%;
+    margin-top: 7.5vh;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0.1em solid white;
+    text-align: center;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.About_Textno03_Button:hover{
+    color: black;
+    border: .1em rgb(255, 102, 0);
+    background-color: rgb(255, 102, 0);
+}
+
+.About_Textno04 {
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    top: 10.5%;
+    left: 21%;
+    position: relative;
+    margin-top: 5vh;
+}
+
+.Facebook_Button{
+    top: 8.5%;
+    left: 21.5%;
+    position: relative;
+    width: auto;
+    height: 10vh;
+    z-index: 1;
+    animation: fadeIn 2s ease forwards;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.Email_Button {
+    top: 8.5%;
+    left: 25%;
+    position: relative;
+    width: auto;
+    height: 10vh;
+    z-index: 1;
+    animation: fadeIn 2s ease forwards;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    h1 {
+        display: none !important;
+    }
+
+    #Menu_Button,
+    #Menu_Icon {
+        display: none !important;
+    }
+
+    .Home_Textno01,
+    .Home_Textno02,
+    .Home_Textno03_Button,
+    .Student_Textno01,
+    .Student_Textno02 {
+        position: relative;
+    }
+    
+    .Home_Textno01 {
+        left: 8%;
+        font-size: 8vw;
+    }
+
+    .Home_Textno02 {
+        left: 7.5%;
+        font-size: 4vw;
+    }
+
+    .Home_Textno03_Button {
+        font: 500 3.5vw/1 'Bahnschrift';
+        top: 27.5%;
+        left: 7.5%;
+    }
+
+    #Close_Button {
+        display: none !important;
+    }
+
+    .Student_Textno01 {
+        top: 25%;
+        left: 5%;
+        font-size: 8vw;
+    }
+
+    .Student_Textno02 {
+        top: 25%;
+        left: 5%;
+        font-size: 3.5vw;
+    }
+
+    #Projects img {
+        top: 25.5% !important;
+        left: 5%;
+        width: 88.5% !important;
+        height: 40%;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    .Projects_Textno01 {
+        top: 48.5%;
+        font-size: 6.5vw;
+        left: 5.5% !important;
+    }
+
+    .Projects_Textno02 {
+        top: 46.5%;
+        font-size: 3vw;
+        left: 5.5% !important;
+    }
+
+    .Projects_Textno03_Button,
+    .Projects_Textno04_Button {
+        color: white;
+        font: 500 2vw/1 'Bahnschrift';
+        top: 48.5%;
+        left: 5.5% !important;
+        width: 10%;
+        padding: 3.5% 2%;
+        margin-top: 7.5vh;
+        text-decoration: none;
+        background-color: transparent;
+        border: 0.1em solid white;
+        text-align: center;
+        transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+        transition: transform 0.3s ease-in-out;
+        margin-bottom: 10%;
+    }
+
+    #Career img {
+        top: 18.5%;
+        left: 5%;
+        width: 88.5% !important;
+        height: 45%;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    .Career_Textno01 {
+        font-weight: bold;
+        font-size: 5.5vw;
+        top: 52.5%;
+        left: 4.8%;
+        margin-top: 15vh;
+    }
+
+    .Career_Textno02 {
+        font-weight: 100;
+        font-size: 2vw;
+        top: 47.5%;
+        left: 4.8%;
+        margin-top: 5vh;
+        margin-bottom: 40vh;
+    }
+    .About_Textno01 {
+        font-size: 5.5vw;
+        top: 8.5%;
+        left: 4.8%;
+        margin-top: 15vh;
+    }
+    
+    .About_Textno02 {
+        font-size: 2vw;
+        top: 3.5%;
+        left: 4.8%; 
+        margin-top: 5vh;
+    }
+    
+    .About_Textno03_Button {
+        font: 500 3vw/1 'Bahnschrift';
+        left: 4.8%;
+        width: 10%;
+        padding: 3.5% 2%;
+        margin-top: 7.5vh;
+    }
+    
+    .About_Textno04 {
+        font-size: 5.5vw;
+        left: 4.8%;
+        margin-top: 5vh;
+    }
+    
+    .Facebook_Button{
+        top: 8.5%;
+        left: 4.8%;
+    }
+    .Email_Button {
+        top: 8.5%;
+        left: 8.5%;
+    }
+}
+
+/*WHOLE_WEBSITE : BACKGROUND=====================================================================*/
+.Whole_Container {
+    width: 100%;
+    height: 100vh;
+}
+
+.Whole_Section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+#Home img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    animation: fadeIn .5s ease forwards;
+    z-index: -1;
+}
+
+#Projects {
+    position: relative;
+}
+
+#Projects img {
+    position: absolute;
+    top: 30%;
+    right: 12.5%;
+    width: 35%;
+    height: auto;
+    z-index: -1;
+    object-fit: fill;
+    border: 0.1em solid white;
+}
+
+#Career {
+    position: relative;
+}
+
+#Career img {
+    position: absolute;
+    top: 18.5%;
+    right: 12.5%;
+    width: 73.1%;
+    height: 45%;
+    z-index: -1;
+    object-fit: cover;
+    border: 0.1em solid white;
+}
+
+/*ANIMATION======================================================================================*/
+.Animate-once {
+    opacity: 0;
+}
+
+.Animated {
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
